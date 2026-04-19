@@ -18,3 +18,37 @@ CMD ["apachectl", "-D", "FOREGROUND"]
 -----------------------------------------------------------------------------
 
 
+    1  docker --version
+    2  mkdir website-task
+    3  cd website-task/
+    4  vi Dockerfile
+    5  docker build -t my-apache-site .
+    6  ls
+    7  cat Dockerfile
+    8  nano Dockerfile
+    9  docker build -t my-apache-site .
+   10  nano Dockerfile
+   11  cat Dockerfile
+   12  docker build -t my-apache-site .
+   13  wget https://templatemo.com/tm-616-split-index
+   14  scp -i your-key.pem templatemo_616_split_index.zip ubuntu@EC2-IP:/home/ubuntu/website-task/
+   15  ls
+   16  nano Dockerfile
+   17  cat Dockerfile
+   18  docker build -t my-apache-site .
+   19  ls -l
+   20  cat tm-616-split-index
+   21  ls
+   22  ls -l
+   23  ls
+   24  rm -rf tm-616-split-index
+   25  ls
+   26  ls -la
+   27  cd .
+   28  cd ..
+   29  mv ~/templatemo_616_split_index ~/website-task/
+   30  cd ~/website-task
+   31  ls
+   32  docker build -t my-apache-site .
+   33  docker run -d -p 8081:80 --name web1 my-apache-site
+   34  history
