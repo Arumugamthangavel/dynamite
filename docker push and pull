@@ -1,0 +1,103 @@
+sudo apt update
+
+sudo apt install docker.io
+
+sudo systemctl start docker
+
+sudo usermod -aG docker $USER
+
+sudo -i
+
+su - ubuntu ->switch to ubuntu user
+
+docker pull nginx
+
+docker run -d --rm --name dockertask -P nginx 
+
+docker ps -> lists container
+
+docker images -> lists images
+
+docker images -a -> shows all images
+
+docker exec -it dockertask  /bin/bash
+
+cd /usr/share/nginx/html
+
+ls
+
+echo "hello arumugam" > index.htm
+
+curl localhost
+
+docker commit -m "index.html updated" -a "jack-20" 675929912d36 aruface/nginix:1
+
+docker images
+
+docker login -u dhahirasaraf1234
+
+docker push dhahirasaraf1234/nginix:1
+
+docker run -d -P sitaramam/nginx:1
+
+docker ps
+
+32769 (hostport)->80 (container port)
+docker history sitaramam/nginx:1
+docker inspect sitaramam/nginx:1
+docker inspect 4a5fba5f4bf3
+vi Dockerfile
+docker build -t asaraf .
+
+
+ sudo vi /etc/ssh/sshd_config.d/60-cloudimg-settings.conf
+
+FROM ubuntu
+RUN apt-get update
+RUN apt-get install apache2 unzip -y
+
+WORKDIR /var/www/html/
+COPY templatemo_574_mexant.zip  .
+RUN unzip templatemo_574_mexant.zip
+RUN mv templatemo_574_mexant/*  .
+EXPOSE 80
+
+CMD ["apache2ctl", "-D", "FOREGROUND" ]
+
+
+
+
+docker history
+    2  docker history sitaramam/nginx:1
+    3  docker inspect sitaramam/nginx:1
+    4  docker ps
+    5  docker inspect 4a5fba5f4bf3
+    6  vi Dockerfile
+    7  docker built -t asaraf .
+    8  docker build -t asaraf .
+    9  docker images
+   10  vi Dockerfile
+   11  sudo passwd ubuntu
+   12  sudo vi /etc/ssh/sshd_config.d/60-cloudimg-settings.conf
+   13  sudo service ssh restart
+   14  ls
+   15  unizp templatemo_574_mexant.zip
+   16  unzip templatemo_574_mexant.zip
+   17  sudo apt install unizp -y
+   18  sudo apt install unzip -y
+   19  ls
+   20  unzip templatemo_574_mexant.zip
+   21  ls
+   22  vi Dockerfile
+   23  docker build -t test .
+   24  docker images
+   25* docker run -it test:
+   26  docker run -it test /bin/bash
+   27  vi Dockerfile
+   28  docker build -t test:1 .
+   29  docker run -it test:1 /bin/bash
+   30  vi Dockerfile
+   31  docker build -t test:2 .
+   32  docker run -d -P test:2
+   33  docker ps
+   34  vi Dockerfile
